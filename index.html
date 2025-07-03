@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nível 0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Nível 0</h1>
+  <p>Nível 0 — Comece pelo começo. Qual a primeira letra do alfabeto?</p>
+
+  <form onsubmit="return verificarResposta()">
+    <input type="text" id="resposta" placeholder="Digite sua resposta">
+    <button type="submit">Enviar</button>
+  </form>
+
+  <!-- Segredo escondido no código-fonte -->
+  <!-- a -->
+
+  <p class="hidden-clue">Pista oculta: a</p>
+
+  <script>
+    function verificarResposta() {
+      const resposta = document.getElementById("resposta").value.toLowerCase().trim();
+      if (resposta === "a") {
+        window.location.href = "nivel1.html";
+      } else {
+        alert("Resposta errada!");
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>

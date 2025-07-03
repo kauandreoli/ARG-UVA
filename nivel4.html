@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nível 4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Nível 4</h1>
+  <p>Nível 4 — Quantas patas tem uma aranha?</p>
+
+  <form onsubmit="return verificarResposta()">
+    <input type="text" id="resposta" placeholder="Digite sua resposta">
+    <button type="submit">Enviar</button>
+  </form>
+
+  <!-- Segredo escondido no código-fonte -->
+  <!-- 8 -->
+
+  <p class="hidden-clue">Pista oculta: 8</p>
+
+  <script>
+    function verificarResposta() {
+      const resposta = document.getElementById("resposta").value.toLowerCase().trim();
+      if (resposta === "8") {
+        window.location.href = "nivel5.html";
+      } else {
+        alert("Resposta errada!");
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>
