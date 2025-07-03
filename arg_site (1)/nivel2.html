@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nível 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Nível 2</h1>
+  <p>Nível 2 — Qual é a cor do céu em um dia claro?</p>
+
+  <form onsubmit="return verificarResposta()">
+    <input type="text" id="resposta" placeholder="Digite sua resposta">
+    <button type="submit">Enviar</button>
+  </form>
+
+  <!-- Segredo escondido no código-fonte -->
+  <!-- luza -->
+
+  <p class="hidden-clue">Pista oculta: luza</p>
+
+  <script>
+    function verificarResposta() {
+      const resposta = document.getElementById("resposta").value.toLowerCase().trim();
+      if (resposta === "azul") {
+        window.location.href = "nivel3.html";
+      } else {
+        alert("Resposta errada!");
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>
